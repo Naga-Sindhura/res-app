@@ -27,6 +27,13 @@ app.use(
     })
 );
 
+app.use(cors(
+    {
+        origin: ["https://res-app-frontend.vercel.app/"],
+        methods: ["POST","GET"],
+        credentials: true
+    }
+));
 
 
 app.use((req, res, next) => {
