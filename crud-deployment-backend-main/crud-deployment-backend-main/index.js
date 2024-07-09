@@ -27,6 +27,14 @@ app.use(
     })
 );
 
+app.use(cors(
+    {
+        origin: ["https://res-app-phi.vercel.app/"],
+        methods: ["POST","GET"],
+        credentials: true
+    }
+));
+
 app.use((req, res, next) => {
     console.log(req.session);
     next();
