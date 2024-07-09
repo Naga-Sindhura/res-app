@@ -12,7 +12,7 @@ const AdminLogin = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post('/admin/login', { username, password });
+      const response = await axios.post('https://res-app-phi.vercel.app/admin/login', { username, password });
       if (response.status === 200) {
         history.push('/admin/dashboard');
       }
